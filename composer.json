@@ -2,9 +2,6 @@
     "name": "daltcore/laravel-useful-helpers",
     "description": "Some useful helpers for the laravel framework",
     "type": "library",
-    "require": {
-        "laravel/laravel": "5.3.*"
-    },
     "license": "MIT",
     "authors": [
         {
