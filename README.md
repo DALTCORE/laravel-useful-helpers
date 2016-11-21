@@ -3,6 +3,10 @@ Some useful helpers for Laravel
 
 Laravel 5.3 compatible
 
+```
+composer require daltcore/laravel-useful-helpers dev-master
+```
+
 ```php
 /**
 * Generate a password without i o 0 I l L etc.
