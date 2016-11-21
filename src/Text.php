@@ -10,7 +10,7 @@ class Text {
      * @param string $available_sets
      * @return string
      */
-    public static function generateStrongPassword($length = 9, $add_dashes = false, $available_sets = 'lud')
+    public static function userFriendlyPassword($length = 9, $add_dashes = false, $available_sets = 'lud')
     {
         $sets = array();
         if(strpos($available_sets, 'l') !== false)

@@ -10,6 +10,6 @@ if (! function_exists('user_friendly_password')) {
      */
     function user_friendly_password($length = 9, $add_dashes = false, $available_sets = 'lud')
     {
-        return \DALTCORE\Helpers\Text::generateStrongPassword($length, $add_dashes, $available_sets);
+        return \DALTCORE\Helpers\Text::userFriendlyPassword($length, $add_dashes, $available_sets);
     }
 }
