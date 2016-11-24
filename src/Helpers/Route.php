@@ -2,6 +2,8 @@
 
 namespace DALTCORE\Helpers;
 
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+
 class Route {
 
     /**
