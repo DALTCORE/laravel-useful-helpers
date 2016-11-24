@@ -14,7 +14,7 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "DALTCORE\\Helpers": "src/"
+            "DALTCORE\\Helpers\\": "src/"
         }
     },
     "minimum-stability": "stable"
