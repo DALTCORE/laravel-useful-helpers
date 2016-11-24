@@ -15,13 +15,15 @@ class Route {
     {
         if($uri == null){
             throw new \Exception('URI cannot be empty');
+        } else {
+            $uri = str_replace(\Request::root(), '', $uri);
+            $uri = trim($uri);
         }
 
         $routes = app('router')->getRoutes();
 
         foreach($routes->get() as $route)
         {
-            $uri = trim($uri);
             $re = self::delete_all_between('{', '}', $route->uri());
 
             preg_match($re, trim($route->uri()), $matches);
