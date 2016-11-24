@@ -11,10 +11,10 @@
     ],
     "autoload": {
         "files": [
-            "src/Helpers/helpers.php"
+            "src/helpers.php"
         ],
         "psr-4": {
-            "DALTCORE\\": "src/"
+            "DALTCORE\\Helpers": "src/"
         }
     },
     "minimum-stability": "stable"

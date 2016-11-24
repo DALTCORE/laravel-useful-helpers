@@ -13,3 +13,15 @@ if (! function_exists('user_friendly_password')) {
         return \DALTCORE\Helpers\Text::userFriendlyPassword($length, $add_dashes, $available_sets);
     }
 }
+
+if (! function_exists('route_name')) {
+    /**
+     * Get route name from URI
+     * @param null $uri
+     * @return string route name
+     */
+    function route_name($uri = null)
+    {
+        return \DALTCORE\Helpers\Route::getRouteNameByUri($uri);
+    }
+}
