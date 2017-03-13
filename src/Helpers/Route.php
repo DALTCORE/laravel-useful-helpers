@@ -17,6 +17,10 @@ class Route {
     public static function getRouteNameByUri($uri = null, $method = 'GET')
     {
         $route = null;
+        
+        if($uri === null) {
+			$uri = \URL::current();
+		}
 
         try {
             $route = app('router')->getRoutes()->match(app('request')->create($uri));
