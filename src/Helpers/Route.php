@@ -23,7 +23,7 @@ class Route {
 		}
 
         try {
-            $route = app('router')->getRoutes()->match(app('request')->create($uri));
+            $route = app('router')->getRoutes()->match(app('request'));
         } catch (NotFoundHttpException $exception) {
             return null;
         }
