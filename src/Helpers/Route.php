@@ -37,4 +37,16 @@ class Route
 
         return NULL;
     }
+    
+     /**
+     * Get URI by route name
+     *
+     * @param $routeName
+     *
+     * @return mixed
+     */
+    public static function getUriByRouteName($routeName)
+    {
+        return app('router')->getRoutes()->getByName($routeName)->uri();
+    }
 }
