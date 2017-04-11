@@ -2,36 +2,39 @@
 
 namespace DALTCORE\Helpers;
 
+use Illuminate\Support\Facades\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-class Route {
+class Route
+{
 
     /**
      * Get route name by given URI
      *
      * @param null|string $uri
-     * @param string $method
+     * @param string      $method
      *
      * @return mixed
      */
-    public static function getRouteNameByUri($uri = null, $method = 'GET')
+    public static function getRouteNameByUri($uri = NULL, $method = 'GET')
     {
-        $route = null;
-        
-        if($uri === null) {
-			$uri = \URL::current();
-		}
+        $route = NULL;
+
+        if ($uri === NULL) {
+            $uri = \URL::current();
+            $method = Request::instance()->getMethod();
+        }
 
         try {
-            $route = app('router')->getRoutes()->match(app('request'));
+            $route = app('router')->getRoutes()->match(app('request')->create($uri, $method));
         } catch (NotFoundHttpException $exception) {
-            return null;
+            return NULL;
         }
 
         if ($route) {
             return $route->getName();
         }
 
-        return null;
+        return NULL;
     }
 }
