@@ -41,9 +41,8 @@ class Route
      /**
      * check if the given route name(s) are matching with the current route name
      *
-     * @param $routeName
-     *
-     * @return mixed
+     * @param  array $routeName
+     * @return boolean
      */
     public static function isActiveRoute($routeName)
     {    
@@ -53,9 +52,9 @@ class Route
     /**
      * Check if the current uri contains the given uri
      *
-     * @param mixed   $uri
-     * @param boolean $strict
-     * @return string
+     * @param  string  $uri
+     * @param  boolean $strict
+     * @return boolean
      */
     function isActiveUri($uri, $strict = false)
     {
