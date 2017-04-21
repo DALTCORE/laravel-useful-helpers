@@ -56,7 +56,7 @@ class Route
      * @param  boolean $strict
      * @return boolean
      */
-    function isActiveUri($uri, $strict = false)
+    public static function isActiveUri($uri, $strict = false)
     {
         if($strict) {
             return Request::is($uri);
