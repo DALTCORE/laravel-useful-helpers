@@ -47,11 +47,12 @@ if (!function_exists('activeUri')) {
     /**
      * Check if the current uri contains the uri
      *
-     * @param mixed $uri
+     * @param mixed   $uri
+     * @param boolean $strict
      * @return string
      */
-    function activeUri($uri)
+    function activeUri($uri, $strict = false)
     {
-        return \DALTCORE\Helpers\Route::isActiveUri($uri);
+        return \DALTCORE\Helpers\Route::isActiveUri($uri, (boolean)$strict);
     }
 }
