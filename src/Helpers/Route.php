@@ -39,14 +39,30 @@ class Route
     }
     
      /**
-     * Get URI by route name
+     * check if the given route name(s) are matching with the current route name
      *
      * @param $routeName
      *
      * @return mixed
      */
-    public static function getUriByRouteName($routeName)
+    public static function isActiveRoute($routeName)
+    {    
+        return in_array(static::route_name(), $routeName);
+    }
+
+    /**
+     * Check if the current uri contains the given uri
+     *
+     * @param mixed   $uri
+     * @param boolean $strict
+     * @return string
+     */
+    function isActiveUri($uri, $strict = false)
     {
-        return app('router')->getRoutes()->getByName($routeName)->uri();
+        if($strict) {
+            return Request::is($uri);
+        }
+            
+        return Request::is('*' . $uri . '*');
     }
 }
