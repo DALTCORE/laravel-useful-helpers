@@ -46,7 +46,7 @@ class Route
      */
     public static function isActiveRoute($routeName)
     {    
-        return in_array(static::route_name(), $routeName);
+        return in_array(route_name(), $routeName);
     }
 
     /**
