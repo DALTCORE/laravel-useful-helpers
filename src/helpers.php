@@ -32,8 +32,8 @@ if (!function_exists('activeRoute')) {
     /**
      * Check if the given route name is the same as the current route
      *
-     * @param  array $array
-     * @return string
+     * @param  mixed $array
+     * @return boolean
      */
     function activeRoute($array)
     {
@@ -49,10 +49,10 @@ if (!function_exists('activeUri')) {
      *
      * @param  string  $uri
      * @param  boolean $strict
-     * @return string
+     * @return boolean
      */
     function activeUri($uri, $strict = false)
     {
-        return \DALTCORE\Helpers\Route::isActiveUri($uri, (boolean)$strict);
+        return \DALTCORE\Helpers\Route::isActiveUri((string)$uri, (boolean)$strict);
     }
 }
