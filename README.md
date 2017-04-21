@@ -29,3 +29,33 @@ echo route_name(); // site.home.show
 echo route_name(\URL::current()); // site.home.show
 echo route_name('cms/user/1/delete', 'DELETE'); // cms.user.delete
 ```
+
+### Check if the given route name(s) match the current route name
+Just give a string or an array with string or multiple params and a boolean will be returned if the given route name(s) has a match for the current route name.
+```php
+/**
+ * Check if the given route name(s) is or are the same as the current route
+ *
+ * @param  mixed $array
+ * @return boolean
+ */
+if(activeRoute('posts.index')) { ...
+if(activeRoute('posts.index', 'posts.show', ...)) { ...
+if(activeRoute(['posts.index', 'posts.show', ...])) { ...
+```
+
+### Check if the given URI match the current URI
+You have two options:
+- Check if the given URI matches only a part of the current URI
+- Check if the given URI matches the current URI exactly
+```php
+/**
+ * Check if the current uri contains the given uri
+ *
+ * @param  string  $uri
+ * @param  boolean $strict
+ * @return boolean
+ */
+if(activeUri('posts')) { ...
+if(activeUri('posts', true)) { ...
+```

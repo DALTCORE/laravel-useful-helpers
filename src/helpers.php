@@ -30,7 +30,7 @@ if (! function_exists('route_name')) {
 
 if (!function_exists('activeRoute')) {
     /**
-     * Check if the given route name is the same as the current route
+     * Check if the given route name(s) is or are the same as the current route
      *
      * @param  mixed $array
      * @return boolean
@@ -45,7 +45,7 @@ if (!function_exists('activeRoute')) {
 
 if (!function_exists('activeUri')) {
     /**
-     * Check if the current uri contains the uri
+     * Check if the current uri contains the given uri
      *
      * @param  string  $uri
      * @param  boolean $strict
