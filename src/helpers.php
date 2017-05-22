@@ -38,8 +38,22 @@ if (!function_exists('activeRoute')) {
     function activeRoute($array)
     {
         (is_array($array)) ? $routes = $array : $routes = func_get_args();
-        
+
         return \DALTCORE\Helpers\Route::isActiveRoute($routes);
+    }
+}
+
+if (!function_exists('active_route')) {
+    /**
+     * Check if the given route name is the same as the current route
+     * based on wildcards
+     *
+     * @param  mixed $array
+     * @return boolean
+     */
+    function active_route($routeName)
+    {
+        return \DALTCORE\Helpers\Route::isRouteActive($routeName);
     }
 }
 
