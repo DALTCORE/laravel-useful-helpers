@@ -50,6 +50,17 @@ class Route
     }
 
     /**
+     * Check if the given route is active based on current route name and fnmatch
+     *
+     * @param $routeName
+     * @return bool
+     */
+    public function isRouteActive($routeName)
+    {
+        return fnmatch($routeName, route_name());
+    }
+
+    /**
      * Check if the current uri contains the given uri
      *
      * @param  string  $uri
