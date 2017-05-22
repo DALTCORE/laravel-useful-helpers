@@ -55,7 +55,7 @@ class Route
      * @param $routeName
      * @return bool
      */
-    public function isRouteActive($routeName)
+    public static function isRouteActive($routeName)
     {
         return fnmatch($routeName, route_name());
     }
