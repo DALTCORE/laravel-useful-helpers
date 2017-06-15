@@ -43,6 +43,7 @@ class Route
      *
      * @param  array $routeName
      * @return boolean
+     * @depricated v1.0.1 use active_route()
      */
     public static function isActiveRoute($routeName)
     {
