@@ -34,7 +34,7 @@ echo route_name('cms/user/1/delete', 'DELETE'); // cms.user.delete
 Just give a string and a boolean will be returned if the given route name has a match for the current route name.
 ```php
 /**
- * Check if the given route name(s) is or are the same as the current route
+ * Check if the given route name is or are the same as the current route
  *
  * @param  string $route
  * @return boolean
