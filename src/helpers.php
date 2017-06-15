@@ -34,6 +34,7 @@ if (!function_exists('activeRoute')) {
      *
      * @param  mixed $array
      * @return boolean
+     * @depricated v1.0.1 use active_route()
      */
     function activeRoute($array)
     {
