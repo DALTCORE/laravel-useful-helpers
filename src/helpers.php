@@ -668,3 +668,4 @@ if (! function_exists('title_case')) {
     {
         return Str::title($value);
     }
+}
