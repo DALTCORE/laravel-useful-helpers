@@ -1,7 +1,7 @@
 # laravel-useful-helpers
 Some useful helpers for Laravel
 
-Laravel 5.3/5.4/5.5/5.6/5.7 compatible
+Laravel 5.3/5.4/5.5/5.6/5.7/5.8/6.0 compatible
 
 ```
 composer require daltcore/laravel-useful-helpers dev-master
