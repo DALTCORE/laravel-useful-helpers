@@ -669,3 +669,25 @@ if (! function_exists('title_case')) {
         return Str::title($value);
     }
 }
+
+if (!function_exists('is_json')) {
+    /**
+     * Check if string is actually a json string
+     *
+     * @param $string
+     *
+     * @return bool
+     */
+    function is_json($string)
+    {
+        if (is_string($string) === false) {
+            return false;
+        }
+
+        if (json_decode($string) === null) {
+            return false;
+        }
+
+        return true;
+    }
+}
