@@ -58,6 +58,9 @@ class Route
      */
     public static function isRouteActive($routeName)
     {
+        if (route_name() === null) {
+            return false;
+        }
         return fnmatch($routeName, route_name());
     }
 
